@@ -1,13 +1,15 @@
 Source: vyatta-service-switch
-Section: contrib/net
+Section: net
 Priority: optional
-Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends: debhelper (>= 9),
-               dh-python,
-               dh-yang,
-               python3,
-Standards-Version: 3.9.8
-
+Maintainer: NuDanOS Maintainers <jon@fernandez.tech>
+Build-Depends: debhelper-compat (= 13),
+ dh-python,
+ dh-yang,
+ python3
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/nudanos/vyatta-service-switch.git
+Vcs-Browser: https://github.com/nudanos/vyatta-service-switch
 
 Package: vyatta-policy-vlan-modify-v1-yang
 Architecture: all
@@ -19,4 +21,3 @@ Depends: python3,
 	 ${yang:Depends}
 Description: Vyatta switch vlan-modify yang
  Provides scripts and files necessary for switch vlan-modify feature
-
